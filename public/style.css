@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/bg.png');
+    
+}
+
+.center-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+    font-weight: 800;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-color: #da8517;
+    border-radius: 12px;
+}
+
+button {
+    background-color: #da8517;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 12px;  
+    transition:all 0.5s; 
+}
+
+
+button:hover {
+    filter:brightness(1.2); 
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #da8517;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.player {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.player img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.player a {
+    display: inline-block;
+    background-color: #da8517;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 12px;  
+    transition:all 0.5s; 
+    font-size: 14px;
+}
+
+.player p {
+    line-height: 0.5;
+}
+
+.player a:hover {
+    background-color: #da8517;
+    filter:brightness(1.2);
+}
+
+.texto{
+    text-align: justify;
+}
+
+.miniatura{
+    size: 50px;
+}
+
+.favoritos{
+    display: inline-block;
+    background-color: #ffffff;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.botaoFavoritar {
+    align-self: center;
+}
+
+.texto{
+    display: flex; 
+    flex-direction: column;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    text-shadow: 6px 6px 10px#464646;
+}
+
+
+

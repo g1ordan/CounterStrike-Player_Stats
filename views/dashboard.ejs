@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Cstats</title>
+</head>
+<body>
+    <div class="center-content">
+    <h1 class="logo">Cs-stats</h1>
+    <p>Bem vindo, <%= user.nome %>!</p>
+    <a href="/user/edit">Perfil</a>
+    <a href="/favorites">Favoritos</a>
+
+    <form method="GET" action="/dashboard" >
+        <input type="text" placeholder="Pesquisar" name="name" id="name" />
+        <button name="type" type="submit">Buscar</button>
+    </form>
+
+        <% if(message) { %>
+            <script>
+                alert('<%= message %>')
+            </script>
+       <% } %>
+        <% if(notFound == true) { %>
+            <script>
+                alert("Jogador não encontrado")
+            </script>
+        <% } else if (player){ %>
+            <div class="player">
+            <form action="/favorite/<%= player.id %>" method="POST">
+            <div class="texto">
+            <img src="<%= player.image %>" alt=""/>
+            <br />
+            
+            <p>Nome: <%= player.name %></p>
+            <p>Nickname: <%=player.ign %></p>
+            <p>Time: <%= player.team.name %></p>
+            <p>Idade: <%= player.age %></p>
+            <p>Pais: <%= player.country.name %></p>
+
+            <h2>Estatisticas:</h2>
+            
+            <p>Rating 2.0: <%= player.statistics.rating %></p>
+            <p>Kills por round: <%= player.statistics.killsPerRound %></p>
+            <p>Headshots: <%= player.statistics.headshots %></p>
+            <p>Mapas Jogados: <%= player.statistics.mapsPlayed %></p>
+            <p>Mortes por round: <%= player.statistics.deathsPerRound %></p>
+            <p>Contribuicao por round: <%= player.statistics.roundsContributed %></p>
+            
+            <button class="botaoFavoritar" type="submit">Favoritar</button>
+        
+                </div>
+            </form>
+        </div>
+        <% } %>
+
+
+    
+    <a href="/logout">Logout</a>
+</div>
+</body>
+</html>

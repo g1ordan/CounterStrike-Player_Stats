@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="player">
+        <div class="texto">
+            <h1>Estatísticas</h1>
+        <img src="<%= player.imagem %>" alt=""/>
+        <br />
+        <p>Nome: <%= player.nome %></p>
+        <p>Nickname: <%=player.nick %></p>
+        <p>Time: <%= player.time %></p>
+        <p>Idade: <%= player.idade %></p>
+        <p>Pais: <%= player.pais %></p>
+        <p>Rating 2.0: <%= player.rating %></p>
+        <p>Abates por round: <%= player.killsPerRound %></p>
+        <p>Headshots: <%= player.headshots %></p>
+        <p>Mapas Jogados: <%= player.mapasJogados %></p>
+        <p>Mortes por round: <%= player.mortesPorRound %></p>
+        <p>Contribuicao por round: <%= player.contribuicaoPorRound %></p>
+  
+        <!-- News -->
+    </div> 
+    <a href="/favorites" class="transition">Voltar</a>
+</body>
+</html>
